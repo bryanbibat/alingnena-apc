@@ -11,7 +11,7 @@ class CreateProducts < ActiveRecord::Migration
     
      Product.create :name => "test product 1", :description => "test description 1", 
                     :cost => 1.11, :stock => 10
-     Product.create :name => "test  product 2", :description => "<b>test description 2</b>",
+     Product.create :name => "test product 2", :description => "<b>test description 2</b>",
                     :cost => 2.22, :stock => 20
 
   end
