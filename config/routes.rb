@@ -8,4 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.search_products 'products/search', :controller => 'products', :action => 'search'
   map.connect 'products/:id', :controller => 'products', :action => 'destroy', :conditions => { :method => :delete }
   map.product 'products/:id', :controller => 'products', :action => 'show', :conditions => { :method => :get }
+  map.connect 'products/:id', :controller => 'products', :action => 'update', :conditions => { :method => :put }
+  map.edit_product 'products/:id/edit', :controller => 'products', :action => 'edit'
+
 end
