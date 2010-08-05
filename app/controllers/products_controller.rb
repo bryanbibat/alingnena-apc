@@ -13,4 +13,9 @@ class ProductsController < ApplicationController
     flash[:notice] = "Product was successfully deleted."
     redirect_to products_url
   end
+
+  def search 
+    @products = Product.all
+  end
+
 end
