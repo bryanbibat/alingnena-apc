@@ -13,6 +13,10 @@
   <%=h @debt.amount %>
 </p>
 
+<p> 
+  <b>Remarks:</b> 
+  <%=h @debt.remarks %>
+</p>
 
 <%= link_to 'Edit', edit_debt_path(@debt) %> |
 <%= link_to 'Back', debts_path %>
