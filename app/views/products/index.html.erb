@@ -14,7 +14,7 @@
     <td><%=h product.description %></td>
     <td><%=number_to_currency product.cost, :unit => 'PhP' %></td>
     <td><%=h product.stock %></td>
-    <td><%= link_to('Show', { :action => 'show', :id => product.id }) %></td>
+    <td><%= link_to 'Show', product_url(product.id) %></td>
   </tr>
 <% end %>
 
