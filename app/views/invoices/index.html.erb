@@ -8,7 +8,7 @@
 
 <% @invoices.each do |invoice| %>
   <tr>
-    <td><%=h invoice.purchase %></td>
+    <td><%=h invoice.display_purchase %></td>
     <td><%=h invoice.reference_number %></td>
     <td><%= link_to 'Show', invoice %></td>
     <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
