@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_filter :check_if_aling_nena, :except => [:index, :show, :search]
+  layout "main"
 
   def index
     @products = Product.find(:all)
