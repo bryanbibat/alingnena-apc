@@ -1,20 +1,8 @@
 <h1>Editing purchase</h1>
 
-<% form_for(@purchase) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :delivered_at %><br />
-    <%= f.date_select :delivered_at %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "form", 
+           :locals => { :purchase => @purchase, 
+                        :button_label => "Update" } %>
 
 <%= link_to 'Show', @purchase %> |
 <%= link_to 'Back', purchases_path %>

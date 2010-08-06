@@ -8,6 +8,12 @@
   <%=h @supplier.contact_number %>
 </p>
 
+<h2>Related Purchases</h2> 
+<ul> 
+<% @supplier.purchases.each do |purchase| %>
+  <li><%= link_to h(purchase.description), purchase %></li> 
+<% end %> 
+</ul>
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
 <%= link_to 'Back', suppliers_path %>

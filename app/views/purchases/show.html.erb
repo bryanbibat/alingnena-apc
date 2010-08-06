@@ -8,6 +8,11 @@
   <b>Delivered at:</b>
   <%=h @purchase.delivered_at %>
 </p>
+<p>
+  <b>Supplier:</b>
+  <%=h @purchase.display_supplier %>
+</p>
+
 
 <%= display_invoice(@purchase) %>
 
