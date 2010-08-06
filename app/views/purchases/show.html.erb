@@ -1,13 +1,15 @@
+<h1>Purchase Details</h1> 
+
 <p>
   <b>Description:</b>
-  <%=h @purchase.description %>
+  <%=h @purchase.description %> 
 </p>
-
 <p>
   <b>Delivered at:</b>
   <%=h @purchase.delivered_at %>
 </p>
 
+<% display_invoice(@purchase) %>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> | 
 <%= link_to 'Back', purchases_path %>
