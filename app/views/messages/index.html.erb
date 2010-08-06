@@ -16,7 +16,7 @@
   </p>
 <% end %>
 
-<%= link_to_remote "Refresh List", :url => message_table_messages_url, :method => :get, :update => "message_list" %>
+<%= periodically_call_remote :url => message_table_messages_url, :method => :get, :update => "message_list", :frequency => 60 %>
 
 <h2>Messages</h2>
 
