@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :suppliers
 
-  map.resources :purchases, :has_one => :invoice
+  map.resources :purchases, :has_one => :invoice do |purchase|
+    purchase.resources :line_items
+  end
 
   map.resources :debts
 
