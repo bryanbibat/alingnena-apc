@@ -13,7 +13,7 @@ class PurchasesController < ApplicationController
   # GET /purchases/1
   # GET /purchases/1.xml
   def show
-    @purchase = Purchase.find(params[:id])
+    @purchase = Purchase.find(params[:id], :include => :products)
 
     respond_to do |format|
       format.html # show.html.erb
