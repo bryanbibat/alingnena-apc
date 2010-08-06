@@ -16,8 +16,10 @@
   </p>
 <% end %>
 
+<%= link_to_remote "Refresh List", :url => message_table_messages_url, :method => :get, :update => "message_list" %>
+
 <h2>Messages</h2>
 
-<ul style="list-style-type:none;font-size:125%;line-height:150%">
+<ul style="list-style-type:none;font-size:125%;line-height:150%" id="message_list">
   <%= render :partial => @messages %>
 </ul>

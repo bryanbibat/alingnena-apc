@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :messages
+  map.resources :messages, :collection => { :message_table => :get }
 
   map.resources :suppliers
 

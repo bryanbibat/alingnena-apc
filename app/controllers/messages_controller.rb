@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
+  def message_table 
+    render :partial => Message.all(:order => "created_at desc")
+  end
+  
   def create
     @message = Message.new(params[:message])
     if @message.save
