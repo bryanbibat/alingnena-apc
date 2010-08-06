@@ -16,6 +16,13 @@
   <%= @product.stock %>
 </p>
 
+<h2>Related Purchases</h2> 
+<ul> 
+<% @product.purchases.each do |purchase| %>
+  <li><%= link_to h(purchase.description), purchase %></li> 
+<% end %> 
+</ul>
+
 <%= link_to 'Edit this record', edit_product_url(@product) %> <br />
 <%= link_to('Delete this record', @product,
             { :confirm => 'Are you sure?', :method => :delete }) %> <br />
