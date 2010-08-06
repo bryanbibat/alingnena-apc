@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :messages
+
   map.resources :suppliers
 
   map.resources :purchases, :has_one => :invoice do |purchase|

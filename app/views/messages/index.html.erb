@@ -1,0 +1,23 @@
+<h1>Aling Nena's Shoutbox</h1>
+
+<% form_for @message do |f| %>
+  <%= f.error_messages %>
+
+  <p> 
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </p>
+  <p>
+    <%= f.submit "Leave Message:" %>
+  </p>
+<% end %>
+
+<h2>Messages</h2>
+
+<ul style="list-style-type:none;font-size:125%;line-height:150%">
+  <%= render :partial => @messages %>
+</ul>
